@@ -2,11 +2,22 @@ name: Publish daily feed
 
 on:
   schedule:
-    # Times are UTC. Chicago is UTC-6 (winter) / UTC-5 (summer), so these land
-    # around 4:17 and 5:47 AM in winter, 5:17 and 6:47 AM in summer. The second
-    # run is a backup; for the same date it always produces the same feed.
+    # Times are UTC. GitHub sometimes delays or skips scheduled runs, so this
+    # tries many times each morning. Every run for the same Chicago date makes
+    # the same feed, so extra runs are harmless: the first one that lands wins.
+    # Chicago winter (UTC-6): roughly 4:17 AM to 11:47 AM. Summer: an hour later.
     - cron: "17 10 * * *"
+    - cron: "47 10 * * *"
+    - cron: "17 11 * * *"
     - cron: "47 11 * * *"
+    - cron: "23 12 * * *"
+    - cron: "53 12 * * *"
+    - cron: "23 13 * * *"
+    - cron: "53 13 * * *"
+    - cron: "37 14 * * *"
+    - cron: "37 15 * * *"
+    - cron: "37 16 * * *"
+    - cron: "47 17 * * *"
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -14,6 +25,7 @@ on:
       - "content/**"
       - "config.json"
       - "scripts/**"
+      - ".github/workflows/**"
 
 permissions:
   contents: write
