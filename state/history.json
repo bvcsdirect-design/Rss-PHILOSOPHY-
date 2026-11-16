@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "date": "2026-11-15",
+    "philosophy": "phil-0001",
+    "reflection": "refl-0001",
+    "fact": "fact-0001"
+  }
+]
