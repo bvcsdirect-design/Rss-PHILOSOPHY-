@@ -17,8 +17,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: daily-feed
@@ -27,9 +25,6 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -40,12 +35,7 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
-      - id: pages
-        uses: actions/configure-pages@v5
-
       - name: Generate feed
-        env:
-          SITE_URL: ${{ steps.pages.outputs.base_url }}
         run: python scripts/generate_feed.py
 
       - name: Save history
@@ -60,9 +50,3 @@ jobs:
             git push
           fi
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-      - id: deploy
-        uses: actions/deploy-pages@v4

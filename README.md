@@ -1,6 +1,6 @@
 # Daily Perspectives
 
-Three entries a day for the KLWP wallpaper: one philosophical idea, one question for reflection, and one verified fact. A GitHub Actions workflow picks the day's set each morning (America/Chicago) and publishes a three-item RSS feed on GitHub Pages. It is free and needs no server or API.
+Three entries a day for the KLWP wallpaper: one philosophical idea, one question for reflection, and one verified fact. A GitHub Actions workflow picks the day's set each morning (America/Chicago) and publishes a three-item RSS feed straight from this repository. It is free and needs no server or API.
 
 ```
 content/library.json        all entries, with sources and metadata
@@ -9,24 +9,22 @@ config.json                 feed title, time zone, length limits
 scripts/generate_feed.py    picks today's set, validates, writes site/feed.xml
 tests/                      checks the selection rules and feed validity
 state/history.json          which entries ran on which date (kept by the workflow)
-.github/workflows/publish.yml  runs daily, commits history, deploys the feed
+.github/workflows/publish.yml  runs daily, commits the feed and history
 ```
 
 ---
 
-## 1. Set up the repository (one time)
+## 1. How it's hosted
 
-1. On GitHub, create a **public** repository named `Rss-PHILOSOPHY-`. Free GitHub Pages needs a public repo.
-2. Upload every file from this folder, keeping the folder structure. The `.github/workflows/publish.yml` file is easy to miss because the folder name starts with a dot. If the uploader skips it, use **Add file → Create new file**, type `.github/workflows/publish.yml` as the name, and paste in its contents.
-3. Go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
-4. Go to **Actions → Publish daily feed → Run workflow**. Wait for the green check (about a minute).
-5. Open `https://bvcsdirect-design.github.io/Rss-PHILOSOPHY-/`. You should see today's three entries and a link to the feed.
+This repository is already set up. No GitHub Pages is needed: each run saves the feed into the repository, and GitHub serves it at a direct link. The repository must stay **public**.
 
 Your feed URL is:
 
 ```
-https://bvcsdirect-design.github.io/Rss-PHILOSOPHY-/feed.xml
+https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml
 ```
+
+To update by hand: **Actions → Publish daily feed → Run workflow**.
 
 ---
 

@@ -233,7 +233,7 @@ def build_feed(day: dt.date, chosen: dict[str, dict], config: dict) -> str:
     tz = ZoneInfo(config["timezone"])
     base = dt.datetime.combine(day, dt.time(config["publish_hour_local"], 0), tz)
     site = config["site_url"].rstrip("/") + "/"
-    feed_url = site + config["feed_filename"]
+    feed_url = config.get("feed_url") or site + config["feed_filename"]
 
     ET.register_namespace("atom", ATOM_NS)
     rss = ET.Element("rss", {"version": "2.0"})

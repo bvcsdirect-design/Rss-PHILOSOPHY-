@@ -1,19 +1,33 @@
 {
   "channel_title": "Daily Perspectives",
   "channel_description": "One philosophical idea, one question, and one verified fact, refreshed daily.",
-  "site_url": "https://YOUR-GITHUB-USERNAME.github.io/daily-perspectives/",
+  "site_url": "https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-",
   "feed_filename": "feed.xml",
   "timezone": "America/Chicago",
   "publish_hour_local": 4,
-  "category_order": ["philosophy", "reflection", "fact"],
+  "category_order": [
+    "philosophy",
+    "reflection",
+    "fact"
+  ],
   "length": {
     "display_soft_max": 95,
     "hard_max": 160,
     "targets": {
-      "philosophy": [45, 140],
-      "reflection": [50, 150],
-      "fact": [55, 155]
+      "philosophy": [
+        45,
+        140
+      ],
+      "reflection": [
+        50,
+        150
+      ],
+      "fact": [
+        55,
+        155
+      ]
     }
   },
-  "original_feed_url": "https://www.cnet.com/rss/news/"
+  "original_feed_url": "https://www.cnet.com/rss/news/",
+  "feed_url": "https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml"
 }
