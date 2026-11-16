@@ -1,0 +1,68 @@
+name: Publish daily feed
+
+on:
+  schedule:
+    # Times are UTC. Chicago is UTC-6 (winter) / UTC-5 (summer), so these land
+    # around 4:17 and 5:47 AM in winter, 5:17 and 6:47 AM in summer. The second
+    # run is a backup; for the same date it always produces the same feed.
+    - cron: "17 10 * * *"
+    - cron: "47 11 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "config.json"
+      - "scripts/**"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-feed
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Generate feed
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: python scripts/generate_feed.py
+
+      - name: Save history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/history.json site/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Daily feed $(TZ=America/Chicago date +%F)"
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
