@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The heart has its reasons, which reason does not know. — Pascal</title>
-      <link>https://www.gutenberg.org/ebooks/18269</link>
-      <description>Translation. Blaise Pascal, Pensées (1670), fragment 277 (Brunschvicg numbering). Translation: W. F. Trotter (public domain)</description>
+      <title>Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo. — Ortega y Gasset</title>
+      <link>https://www.gutenberg.org/ebooks/57448</link>
+      <description>Quotation. José Ortega y Gasset, Meditaciones del Quijote (1914), «Lector...»</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-15-phil-0001</guid>
-      <pubDate>Sun, 15 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-16-phil-0002</guid>
+      <pubDate>Mon, 16 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>Can you choose what you find convincing?</title>
-      <link>https://plato.stanford.edu/entries/ethics-belief/</link>
+      <title>If you could erase your worst memory, would the person left still be you?</title>
+      <link>https://plato.stanford.edu/entries/identity-personal/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-15-refl-0001</guid>
-      <pubDate>Sun, 15 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-16-refl-0002</guid>
+      <pubDate>Mon, 16 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>A day on Venus is longer than its year.</title>
-      <link>https://spaceplace.nasa.gov/all-about-venus/</link>
-      <description>Source: https://spaceplace.nasa.gov/all-about-venus/</description>
+      <title>Each eye has a blind spot with no light sensors. Your brain quietly paints over the gap.</title>
+      <link>https://www.scientificamerican.com/article/mind-the-gap-2008-05/</link>
+      <description>Source: https://www.scientificamerican.com/article/mind-the-gap-2008-05/</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-15-fact-0001</guid>
-      <pubDate>Sun, 15 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-16-fact-0002</guid>
+      <pubDate>Mon, 16 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>
