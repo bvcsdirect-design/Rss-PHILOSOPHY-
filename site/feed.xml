@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo. — Ortega y Gasset</title>
-      <link>https://www.gutenberg.org/ebooks/57448</link>
-      <description>Quotation. José Ortega y Gasset, Meditaciones del Quijote (1914), «Lector...»</description>
+      <title>Zhuangzi dreamed he was a butterfly, then woke unsure which of them was doing the dreaming.</title>
+      <link>https://ctext.org/zhuangzi/adjustment-of-controversies</link>
+      <description>Summary. Zhuangzi, Zhuangzi, ch. 2 "Qiwulun" (Discussion on Making All Things Equal). Translation: Original summary; compare James Legge (1891, public domain)</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-16-phil-0002</guid>
-      <pubDate>Mon, 16 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-17-phil-0003</guid>
+      <pubDate>Tue, 17 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>If you could erase your worst memory, would the person left still be you?</title>
-      <link>https://plato.stanford.edu/entries/identity-personal/</link>
+      <title>A ship has every plank replaced, one at a time. At which plank did it become a different ship?</title>
+      <link>https://plato.stanford.edu/entries/identity-time/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-16-refl-0002</guid>
-      <pubDate>Mon, 16 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-17-refl-0003</guid>
+      <pubDate>Tue, 17 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>Each eye has a blind spot with no light sensors. Your brain quietly paints over the gap.</title>
-      <link>https://www.scientificamerican.com/article/mind-the-gap-2008-05/</link>
-      <description>Source: https://www.scientificamerican.com/article/mind-the-gap-2008-05/</description>
+      <title>Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid.</title>
+      <link>https://www.worldhistory.org/timeline/Great_Pyramid_of_Giza/</link>
+      <description>Source: https://www.worldhistory.org/timeline/Great_Pyramid_of_Giza/</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-16-fact-0002</guid>
-      <pubDate>Mon, 16 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-17-fact-0003</guid>
+      <pubDate>Tue, 17 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>
