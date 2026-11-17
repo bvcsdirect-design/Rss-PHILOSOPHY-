@@ -118,3 +118,51 @@ class FeedTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ScheduleTests(unittest.TestCase):
+    def setUp(self):
+        self.entries, _ = gf.validate_library(LIBRARY, CONFIG)
+        self.cycle = CONFIG["widget_cycle_days"]
+
+    def items(self, today, history=None):
+        xml = gf.build_schedule(today, self.entries, history or [], CONFIG)
+        return ET.fromstring(xml.encode("utf-8")).findall("channel/item")
+
+    def kwgt_block(self, day):
+        # Same arithmetic the widget does: (yyyy*366 + D) - floor(.../cycle)*cycle
+        n = int(day.strftime("%Y")) * 366 + int(day.strftime("%j"))
+        return n - (n // self.cycle) * self.cycle
+
+    def test_has_full_cycle_in_category_order(self):
+        items = self.items(DAY)
+        self.assertEqual(len(items), 3 * self.cycle)
+        cats = [i.findtext("category") for i in items]
+        self.assertEqual(cats, ["philosophy", "reflection", "fact"] * self.cycle)
+
+    def test_each_day_reads_its_own_set(self):
+        history = []
+        expected = {}
+        for n in range(self.cycle):
+            d = DAY + dt.timedelta(days=n)
+            chosen = gf.select_for_date(d, self.entries, history)
+            history = gf.record(history, d, chosen)
+            expected[d] = gf.display_text(chosen["philosophy"])
+        items = self.items(DAY)
+        for d, title in expected.items():
+            self.assertEqual(items[3 * self.kwgt_block(d)].findtext("title"), title, d)
+
+    def test_year_end_window_has_no_gaps(self):
+        items = self.items(dt.date(2026, 12, 20))
+        self.assertTrue(all((i.findtext("title") or "").strip() for i in items))
+        d = dt.date(2027, 1, 2)
+        self.assertTrue(items[3 * self.kwgt_block(d)].findtext("title"))
+
+    def test_late_run_still_matches_today(self):
+        # A run made yesterday must already contain today's set in today's block.
+        yesterday = DAY - dt.timedelta(days=1)
+        hist = gf.record([], yesterday, gf.select_for_date(yesterday, self.entries, []))
+        today_set = gf.select_for_date(DAY, self.entries, hist)
+        items = self.items(yesterday)
+        self.assertEqual(items[3 * self.kwgt_block(DAY)].findtext("title"),
+                         gf.display_text(today_set["philosophy"]))

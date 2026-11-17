@@ -154,7 +154,7 @@ def validate_library(library: dict, config: dict) -> tuple[list[dict], list[str]
     return entries, warnings
 
 
-def validate_feed(xml_text: str, expected_titles: list[str]) -> None:
+def validate_feed(xml_text: str, expected_titles: list[str], expected_items: int = 3) -> None:
     try:
         root = ET.fromstring(xml_text.encode("utf-8"))
     except ET.ParseError as exc:
@@ -165,15 +165,18 @@ def validate_feed(xml_text: str, expected_titles: list[str]) -> None:
     if channel is None or not (channel.findtext("title") or "").strip():
         raise ValidationError("Channel or channel title missing")
     items = channel.findall("item")
-    if len(items) != 3:
-        raise ValidationError(f"Feed must have exactly 3 items, found {len(items)}")
+    if len(items) != expected_items:
+        raise ValidationError(f"Feed must have exactly {expected_items} items, found {len(items)}")
     titles = [(it.findtext("title") or "").strip() for it in items]
     if any(not t for t in titles):
         raise ValidationError("Empty item title")
-    if titles != expected_titles:
+    if titles[:len(expected_titles)] != expected_titles:
         raise ValidationError("Item order does not match philosophy, reflection, fact")
+    cats = [it.findtext("category") for it in items]
+    if cats != ["philosophy", "reflection", "fact"] * (expected_items // 3):
+        raise ValidationError("Items are not in philosophy, reflection, fact order")
     guids = [it.findtext("guid") for it in items]
-    if len(set(guids)) != 3 or not all(guids):
+    if not all(guids) or (expected_items == 3 and len(set(guids)) != 3):
         raise ValidationError("Item GUIDs missing or not unique")
 
 
@@ -229,11 +232,41 @@ def record(history: list[dict], day: dt.date, chosen: dict[str, dict]) -> list[d
 
 # ---------------------------------------------------------------- feed
 
+def widget_block(day: dt.date, cycle: int) -> int:
+    """Which 3-item block the widget reads on this date.
+
+    Mirrors the KWGT formula (df(yyyy) * 366 + df(D)) mod cycle, so phone and
+    generator agree without the phone needing the feed to be fresh.
+    """
+    return (day.year * 366 + day.timetuple().tm_yday) % cycle
+
+
 def build_feed(day: dt.date, chosen: dict[str, dict], config: dict) -> str:
+    return build_rss([(day, chosen)], config, config.get("feed_url"))
+
+
+def build_schedule(today: dt.date, entries: list[dict], history: list[dict], config: dict) -> str:
+    """Feed for the widget: the next `cycle` days, item 3*b+k = block b, category k.
+
+    The widget computes today's block from the phone's clock, so a late or
+    skipped GitHub run never leaves it on yesterday's set.
+    """
+    cycle = config["widget_cycle_days"]
+    sim, blocks = list(history), {}
+    for n in range(cycle + 1):                      # +1 covers the year-end skip
+        day = today + dt.timedelta(days=n)
+        chosen = select_for_date(day, entries, sim)
+        sim = record(sim, day, chosen)
+        blocks.setdefault(widget_block(day, cycle), (day, chosen))
+    fallback = blocks[widget_block(today, cycle)]
+    sets = [blocks.get(b, fallback) for b in range(cycle)]
+    return build_rss(sets, config, config.get("schedule_url"))
+
+
+def build_rss(sets: list, config: dict, self_url: str | None) -> str:
     tz = ZoneInfo(config["timezone"])
-    base = dt.datetime.combine(day, dt.time(config["publish_hour_local"], 0), tz)
+    first = dt.datetime.combine(sets[0][0], dt.time(config["publish_hour_local"], 0), tz)
     site = config["site_url"].rstrip("/") + "/"
-    feed_url = config.get("feed_url") or site + config["feed_filename"]
 
     ET.register_namespace("atom", ATOM_NS)
     rss = ET.Element("rss", {"version": "2.0"})
@@ -242,22 +275,24 @@ def build_feed(day: dt.date, chosen: dict[str, dict], config: dict) -> str:
     ET.SubElement(ch, "link").text = site
     ET.SubElement(ch, "description").text = config["channel_description"]
     ET.SubElement(ch, "language").text = "en-us"
-    ET.SubElement(ch, "lastBuildDate").text = format_datetime(base)
+    ET.SubElement(ch, "lastBuildDate").text = format_datetime(first)
     ET.SubElement(ch, "ttl").text = "60"
-    ET.SubElement(ch, f"{{{ATOM_NS}}}link",
-                  {"href": feed_url, "rel": "self", "type": "application/rss+xml"})
+    if self_url:
+        ET.SubElement(ch, f"{{{ATOM_NS}}}link",
+                      {"href": self_url, "rel": "self", "type": "application/rss+xml"})
 
-    # Philosophy gets the newest timestamp, fact the oldest, so document order
-    # and newest-first sorting give the same order.
-    for offset, cat in enumerate(config["category_order"]):
-        e = chosen[cat]
-        item = ET.SubElement(ch, "item")
-        ET.SubElement(item, "title").text = display_text(e)
-        ET.SubElement(item, "link").text = e.get("link") or site
-        ET.SubElement(item, "description").text = describe(e)
-        ET.SubElement(item, "category").text = cat
-        ET.SubElement(item, "guid", {"isPermaLink": "false"}).text = f"{day.isoformat()}-{e['id']}"
-        ET.SubElement(item, "pubDate").text = format_datetime(base - dt.timedelta(minutes=offset))
+    for day, chosen in sets:
+        base = dt.datetime.combine(day, dt.time(config["publish_hour_local"], 0), tz)
+        # Philosophy gets the newest timestamp within a day, fact the oldest.
+        for offset, cat in enumerate(config["category_order"]):
+            e = chosen[cat]
+            item = ET.SubElement(ch, "item")
+            ET.SubElement(item, "title").text = display_text(e)
+            ET.SubElement(item, "link").text = e.get("link") or site
+            ET.SubElement(item, "description").text = describe(e)
+            ET.SubElement(item, "category").text = cat
+            ET.SubElement(item, "guid", {"isPermaLink": "false"}).text = f"{day.isoformat()}-{e['id']}"
+            ET.SubElement(item, "pubDate").text = format_datetime(base - dt.timedelta(minutes=offset))
 
     ET.indent(rss, space="  ")
     return '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(rss, encoding="unicode") + "\n"
@@ -335,7 +370,16 @@ def main(argv: list[str] | None = None) -> int:
         feed = build_feed(today, chosen, config)
         validate_feed(feed, [display_text(chosen[c]) for c in config["category_order"]])
 
+        cycle = config["widget_cycle_days"]
+        schedule = build_schedule(today, entries, history, config)
+        b = widget_block(today, cycle)
+        validate_feed(schedule, [], expected_items=3 * cycle)
+        if ET.fromstring(schedule.encode()).findall("channel/item")[3 * b].findtext("title") \
+                != display_text(chosen["philosophy"]):
+            raise ValidationError("Schedule feed does not put today's set in today's block")
+
         atomic_write(SITE_DIR / config["feed_filename"], feed)
+        atomic_write(SITE_DIR / config["schedule_filename"], schedule)
         atomic_write(SITE_DIR / "index.html", write_index(today, chosen, config))
         atomic_write(HISTORY_PATH, json.dumps(record(history, today, chosen), indent=2) + "\n")
         print(f"Published {today.isoformat()}:")

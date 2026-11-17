@@ -29,5 +29,8 @@
     }
   },
   "original_feed_url": "https://www.cnet.com/rss/news/",
-  "feed_url": "https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml"
+  "feed_url": "https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml",
+  "widget_cycle_days": 30,
+  "schedule_filename": "schedule.xml",
+  "schedule_url": "https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/schedule.xml"
 }
