@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Zhuangzi dreamed he was a butterfly, then woke unsure which of them was doing the dreaming.</title>
-      <link>https://ctext.org/zhuangzi/adjustment-of-controversies</link>
-      <description>Summary. Zhuangzi, Zhuangzi, ch. 2 "Qiwulun" (Discussion on Making All Things Equal). Translation: Original summary; compare James Legge (1891, public domain)</description>
+      <title>He who knows other men is discerning; he who knows himself is intelligent. — Laozi</title>
+      <link>https://sacred-texts.com/tao/sbe39/sbe39040.htm</link>
+      <description>Translation. Laozi, Dao De Jing, ch. 33. Translation: James Legge (1891, public domain)</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-17-phil-0003</guid>
-      <pubDate>Tue, 17 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-18-phil-0004</guid>
+      <pubDate>Wed, 18 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>A ship has every plank replaced, one at a time. At which plank did it become a different ship?</title>
-      <link>https://plato.stanford.edu/entries/identity-time/</link>
+      <title>Is it possible to want something you've never imagined?</title>
+      <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-17-refl-0003</guid>
-      <pubDate>Tue, 17 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-18-refl-0004</guid>
+      <pubDate>Wed, 18 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid.</title>
-      <link>https://www.worldhistory.org/timeline/Great_Pyramid_of_Giza/</link>
-      <description>Source: https://www.worldhistory.org/timeline/Great_Pyramid_of_Giza/</description>
+      <title>An octopus has three hearts, and its blood is blue because it uses copper instead of iron.</title>
+      <link>https://en.wikipedia.org/wiki/Octopus</link>
+      <description>Source: https://en.wikipedia.org/wiki/Octopus</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-17-fact-0003</guid>
-      <pubDate>Tue, 17 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-18-fact-0004</guid>
+      <pubDate>Wed, 18 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>
