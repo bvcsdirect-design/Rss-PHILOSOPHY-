@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>One must imagine Sisyphus happy. — Camus</title>
-      <link>https://plato.stanford.edu/entries/camus/</link>
-      <description>Translation. Albert Camus, The Myth of Sisyphus (1942). Translation: Justin O'Brien (1955); five-word quotation</description>
+      <title>Lo bueno, si breve, dos veces bueno. — Baltasar Gracián</title>
+      <link>https://es.wikipedia.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia</link>
+      <description>Quotation. Baltasar Gracián, Oráculo manual y arte de prudencia (1647), aforismo 105</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-19-phil-0005</guid>
-      <pubDate>Thu, 19 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-20-phil-0006</guid>
+      <pubDate>Fri, 20 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>If no one would ever find out, would it still matter that you lied?</title>
+      <title>Would you take a pill that made you content with your life exactly as it is?</title>
       <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-19-refl-0005</guid>
-      <pubDate>Thu, 19 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-20-refl-0006</guid>
+      <pubDate>Fri, 20 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>Teaching at Oxford began by 1096, more than 200 years before the Aztecs founded Tenochtitlán.</title>
-      <link>https://www.smithsonianmag.com/smart-news/university-oxford-older-than-aztec-empire-other-facts-will-change-your-perspective-history-1529607/</link>
-      <description>Source: https://www.smithsonianmag.com/smart-news/university-oxford-older-than-aztec-empire-other-facts-will-change-your-perspective-history-1529607/</description>
+      <title>About half of people in a 1998 study didn't notice their conversation partner being swapped.</title>
+      <link>https://doi.org/10.3758/BF03208840</link>
+      <description>Source: https://doi.org/10.3758/BF03208840</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-19-fact-0005</guid>
-      <pubDate>Thu, 19 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-20-fact-0006</guid>
+      <pubDate>Fri, 20 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>
