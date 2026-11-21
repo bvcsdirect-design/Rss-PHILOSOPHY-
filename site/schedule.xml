@@ -5,7 +5,7 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 20 Dec 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/schedule.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,24 +13,24 @@
       <link>https://es.wikipedia.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia</link>
       <description>Quotation. Baltasar Gracián, Oráculo manual y arte de prudencia (1647), aforismo 105</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-20-phil-0006</guid>
-      <pubDate>Fri, 20 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-12-20-phil-0006</guid>
+      <pubDate>Sun, 20 Dec 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
       <title>Would you take a pill that made you content with your life exactly as it is?</title>
       <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-20-refl-0006</guid>
-      <pubDate>Fri, 20 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-12-20-refl-0006</guid>
+      <pubDate>Sun, 20 Dec 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
       <title>About half of people in a 1998 study didn't notice their conversation partner being swapped.</title>
       <link>https://doi.org/10.3758/BF03208840</link>
       <description>Source: https://doi.org/10.3758/BF03208840</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-20-fact-0006</guid>
-      <pubDate>Fri, 20 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-12-20-fact-0006</guid>
+      <pubDate>Sun, 20 Dec 2026 03:58:00 -0600</pubDate>
     </item>
     <item>
       <title>Reason is, and ought only to be the slave of the passions. — Hume</title>
