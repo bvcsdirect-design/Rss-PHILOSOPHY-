@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>He who fights with monsters should be careful lest he thereby become a monster. — Nietzsche</title>
-      <link>https://www.gutenberg.org/ebooks/4363</link>
-      <description>Translation. Friedrich Nietzsche, Beyond Good and Evil (1886), §146. Translation: Helen Zimmern (1906, public domain)</description>
+      <title>Attention is the rarest and purest form of generosity. — Simone Weil</title>
+      <link>https://plato.stanford.edu/entries/simone-weil/</link>
+      <description>Translation. Simone Weil, Letter to Joë Bousquet, 13 April 1942. Translation: Standard English rendering; one-sentence quotation</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-23-phil-0009</guid>
-      <pubDate>Mon, 23 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-24-phil-0010</guid>
+      <pubDate>Tue, 24 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>If an AI said it was suffering, what would convince you it wasn't?</title>
+      <title>Which of your opinions would change if you had been born a century earlier?</title>
       <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-23-refl-0009</guid>
-      <pubDate>Mon, 23 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-24-refl-0010</guid>
+      <pubDate>Tue, 24 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>Around 300 BCE, Euclid proved there are infinitely many prime numbers. The proof still holds.</title>
-      <link>https://mathworld.wolfram.com/EuclidsTheorems.html</link>
-      <description>Source: https://mathworld.wolfram.com/EuclidsTheorems.html</description>
+      <title>Tree rings show Vikings were cutting wood in Newfoundland in 1021, centuries before Columbus.</title>
+      <link>https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago</link>
+      <description>Source: https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-23-fact-0009</guid>
-      <pubDate>Mon, 23 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-24-fact-0010</guid>
+      <pubDate>Tue, 24 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>
