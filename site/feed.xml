@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Attention is the rarest and purest form of generosity. — Simone Weil</title>
-      <link>https://plato.stanford.edu/entries/simone-weil/</link>
-      <description>Translation. Simone Weil, Letter to Joë Bousquet, 13 April 1942. Translation: Standard English rendering; one-sentence quotation</description>
+      <title>Heraclitus held that you cannot step into the same river twice: the waters are always new.</title>
+      <link>https://plato.stanford.edu/entries/heraclitus/</link>
+      <description>Summary. Heraclitus, Fragment B12; reported in Plato, Cratylus 402a. Translation: Original summary</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-24-phil-0010</guid>
-      <pubDate>Tue, 24 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-25-phil-0011</guid>
+      <pubDate>Wed, 25 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>Which of your opinions would change if you had been born a century earlier?</title>
+      <title>If time travel is possible, why hasn't anyone from the future visited?</title>
       <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-24-refl-0010</guid>
-      <pubDate>Tue, 24 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-25-refl-0011</guid>
+      <pubDate>Wed, 25 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>Tree rings show Vikings were cutting wood in Newfoundland in 1021, centuries before Columbus.</title>
-      <link>https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago</link>
-      <description>Source: https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago</description>
+      <title>Lightning heats the air to about 50,000°F, roughly five times hotter than the Sun's surface.</title>
+      <link>https://weather.gov/safety/lightning-temperature</link>
+      <description>Source: https://weather.gov/safety/lightning-temperature</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-24-fact-0010</guid>
-      <pubDate>Tue, 24 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-25-fact-0011</guid>
+      <pubDate>Wed, 25 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>

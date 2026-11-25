@@ -58,5 +58,11 @@
     "philosophy": "phil-0010",
     "reflection": "refl-0010",
     "fact": "fact-0010"
+  },
+  {
+    "date": "2026-11-25",
+    "philosophy": "phil-0011",
+    "reflection": "refl-0011",
+    "fact": "fact-0011"
   }
 ]
