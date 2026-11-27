@@ -5,32 +5,32 @@
     <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
     <description>One philosophical idea, one question, and one verified fact, refreshed daily.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 04:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 04:00:00 -0600</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://raw.githubusercontent.com/bvcsdirect-design/Rss-PHILOSOPHY-/main/site/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Men are disturbed not by the things which happen, but by the opinions about the things. — Epictetus</title>
-      <link>https://en.wikisource.org/wiki/Encheiridion_of_Epictetus_(George_Long)</link>
-      <description>Translation. Epictetus, Enchiridion, 5. Translation: George Long (1877, public domain)</description>
+      <title>One is not born, but rather becomes, a woman. — Simone de Beauvoir</title>
+      <link>https://plato.stanford.edu/entries/beauvoir/</link>
+      <description>Translation. Simone de Beauvoir, The Second Sex (1949), vol. II. Translation: H. M. Parshley (1953); short quotation</description>
       <category>philosophy</category>
-      <guid isPermaLink="false">2026-11-26-phil-0012</guid>
-      <pubDate>Thu, 26 Nov 2026 04:00:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-27-phil-0013</guid>
+      <pubDate>Fri, 27 Nov 2026 04:00:00 -0600</pubDate>
     </item>
     <item>
-      <title>Is it braver to change your mind or to keep a promise you no longer believe in?</title>
+      <title>Can you be wrong about whether you are in pain?</title>
       <link>https://github.com/bvcsdirect-design/Rss-PHILOSOPHY-/</link>
       <description>An original question for reflection.</description>
       <category>reflection</category>
-      <guid isPermaLink="false">2026-11-26-refl-0012</guid>
-      <pubDate>Thu, 26 Nov 2026 03:59:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-27-refl-0013</guid>
+      <pubDate>Fri, 27 Nov 2026 03:59:00 -0600</pubDate>
     </item>
     <item>
-      <title>Hand people a face they didn't choose, and most will explain why they chose it.</title>
-      <link>https://www.jstage.jst.go.jp/article/psysoc/51/2/51_2_142/_article</link>
-      <description>Source: https://www.jstage.jst.go.jp/article/psysoc/51/2/51_2_142/_article</description>
+      <title>Pando, a single aspen in Utah, has about 47,000 trunks sharing one root system.</title>
+      <link>https://www.sciencealert.com/the-worlds-largest-organism-is-slowly-being-eaten</link>
+      <description>Source: https://www.sciencealert.com/the-worlds-largest-organism-is-slowly-being-eaten</description>
       <category>fact</category>
-      <guid isPermaLink="false">2026-11-26-fact-0012</guid>
-      <pubDate>Thu, 26 Nov 2026 03:58:00 -0600</pubDate>
+      <guid isPermaLink="false">2026-11-27-fact-0013</guid>
+      <pubDate>Fri, 27 Nov 2026 03:58:00 -0600</pubDate>
     </item>
   </channel>
 </rss>
